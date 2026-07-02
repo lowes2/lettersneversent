@@ -17,42 +17,6 @@ html{
     
 }
 
-.crt {
-  position: relative;
-  color: #00ff00;
-  font-family: monospace;
-  text-shadow: 0 0 2px #00ff00, 0 0 5px #00ff00;
-  z-index: 1;
-}
-
-/* Scanline overlay */
-.crt::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: repeating-linear-gradient(
-    to bottom,
-    #000 0px,
-    #000 2px,
-    #333 2px,
-    #333 4px
-  );
-  background-size: 100% 4px;
-  animation: scanlines 1s linear infinite;
-  z-index: -1;  /* behind the text */
-}
-
-@keyframes scanlines {
-  from { background-position: 0 0; }
-  to { background-position: 0 4px; } /* move by 1 scanline */
-}
-
-@keyframes flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.85; }
-}
-
-
 
 div {
     box-shadow: 0 0 20px rgb(0, 255, 0), inset 0 0 20px rgb(0, 255, 0);
@@ -197,101 +161,8 @@ img{
   opacity: 1;
 }
 
-#tv-background.active{
-  box-shadow:none;
-  opacity: 1;
-}
-
-#flashbang {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 99;
-  opacity: 0;
-  background-color:white;
-  
-}
-
-#flashbang.active {
-  animation: flashbang 5s cubic-bezier(0.2, 0, 0.2, 1) forwards;
-}
-
-@keyframes flashbang {
- /* INSTANT FLASH */
-  0%   { opacity: 0; filter: blur(0px); }
-  1%   { opacity: 1; filter: blur(2px); }
-
-  /* HOLD FULL WHITE */
-  40%  { opacity: 1; filter: blur(2px); }
-
-  /* AFTERIMAGE BURN */
-  45%  { opacity: 0.5; filter: blur(4px); }
- 
-
-  /* RECOVERY */
-  100% { opacity: 0; filter: blur(0px); }
-}
-
-#tv-overlay.active {
-  opacity: 1;
-  transform: scaleY(0);
-}
-
-#terminal-header::after {
-  content: "_";
-  animation: blink 0.3s step-start infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
 
 
-
-.task.signal-cut {
-  transform: scaleY(0);
-  opacity: 0;
-  filter: brightness(1.4);
-}
-
-.task {
-  transform-origin: center;
-  transition: transform 0.25s ease-in, opacity 0.15s ease;
-  cursor: grab;
-  touch-action: none;
-  background-color:rgba(0, 0, 0, 0);
-  margin: auto;
-
-  display: flex;
-  justify-content: flex-start; /* not top-glued */
-  padding-top: 40px;  
-
-
-  width: auto;
-  height: 300px;
-  border-radius: 5px;
-  padding-top: 5px;
-  border-color:var(--text_color);
-  position: absolute;
-  z-index: 9;
-  text-align: center;
-  flex-direction: column;
-}
-
-
-.task-title {
-  font-size: 1,2rem;
-  margin-top: 4px;           /* pushes it to the top */
-  margin-bottom: 4px;
-  text-align: left;
-}
-
-.task-desc {
-  text-align: center;
-  font-size: 1.2rem;
-}
 
 .button {
   
