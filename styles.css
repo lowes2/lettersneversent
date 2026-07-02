@@ -13,6 +13,7 @@ html{
     --text_glow: 0 0 10px #6ffc76, 0 0 20px #63da35, 0 0 30px #00e60c, 0 0 40px #00e600, 0 0 43px #28be14, 0 0 47px #46c220, 0 0 50px #54a354;
     --text_glow_brighter: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #f0591e, 0 0 40px #f57723, 0 0 43px #28be14, 0 0 47px #46c220, 0 0 50px #54a354;
     --background_glow: 0 0 30px #00ff0d, 0 0 40px #48ff00, 0 0 50px #00ff0d, 0 0 60px #00ff00, 0 0 73px #28be14, 0 0 47px #46c220, 0 0 50px #54a354;
+   --background_color: rgb(255, 241, 177);
     text-shadow: var(--text_glow);
     
 }
@@ -29,7 +30,7 @@ div {
     border-radius: 25;
 }
 body {
-    background-color: rgb(255, 241, 177);
+    background-color: var(--background_color);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;         
@@ -106,54 +107,13 @@ img{
   margin: auto
 }
 
-#page-content {
-  font-family: monospace;
-  white-space: pre;
-  opacity: 0;              /* start invisible */
-  transition: opacity 0.3s ease-in; /* smooth fade-in */
-}
-
-#page-content.visible {
-  opacity: 1;              /* fade in */
-}
-
-#tv-overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  pointer-events: none;
-  transform: scaleY(1);
-  transform-origin: center;
-  transition: transform 0.2s ease-in;
-  border-color:#00e600;
-
-  z-index: 51;
-  opacity: 0;
-}
-
-#tv-background{
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  pointer-events: none;
-  transform: scaleY(1);
-  transform-origin: center;
-  z-index: 50;
-  border:none;
-  box-shadow: none;
-  opacity: 0;
-}
 
 #background{
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: var(--background_color);
   pointer-events: none;
   z-index: -1;
   border: none;
