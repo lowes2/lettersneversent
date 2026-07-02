@@ -29,7 +29,7 @@ div {
     border-radius: 25;
 }
 body {
-    background-color: black;
+    background-color: rgb(255, 241, 177);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;         
