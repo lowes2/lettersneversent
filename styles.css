@@ -8,11 +8,8 @@ html{
 }
 
 :root{
-    --title_color: rgb(255, 255, 255);
-    --text_color:  rgb(255, 255, 255);
-    --text_glow: 0 0 10px #6ffc76, 0 0 20px #63da35, 0 0 30px #00e60c, 0 0 40px #00e600, 0 0 43px #28be14, 0 0 47px #46c220, 0 0 50px #54a354;
-    --text_glow_brighter: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #f0591e, 0 0 40px #f57723, 0 0 43px #28be14, 0 0 47px #46c220, 0 0 50px #54a354;
-    --background_glow: 0 0 30px #00ff0d, 0 0 40px #48ff00, 0 0 50px #00ff0d, 0 0 60px #00ff00, 0 0 73px #28be14, 0 0 47px #46c220, 0 0 50px #54a354;
+    --title_color: rgb(0, 0, 0);
+    --text_color:  rgb(0, 0, 0);
    --background_color: rgb(255, 241, 177);
     text-shadow: var(--text_glow);
     
@@ -20,13 +17,11 @@ html{
 
 
 div {
-    box-shadow: 0 0 20px rgb(0, 255, 0), inset 0 0 20px rgb(0, 255, 0);
-    
     margin: auto;
     display: flex;
     justify-content: center;
     width: 1200px;
-    border: 10px solid rgb(255, 255, 255);
+    border: 10px solid rgb(0, 0, 0);
     border-radius: 25;
 }
 body {
@@ -77,35 +72,6 @@ pre{
   line-height: 25px;
 }
 
-
-a:link{
-  color: var(--text_color);
-  font-family: lowes;
-  letter-spacing: 3px;
-  transition-duration: 0.4s;
-}
-
-a:link:hover{
-  text-shadow: var(--text_glow_brighter);
-}
-
-.file{
-  text-decoration: none; 
-  font-size: 2.5rem; 
-  color: inherit;
-}
-
-figcaption{
-  text-align: center;
-  color: var(--text_color);
-  font-family: lowes;
-  letter-spacing: 3px;
-  font-size: 1.5rem;
-}
-
-img{
-  margin: auto
-}
 
 
 #background{
